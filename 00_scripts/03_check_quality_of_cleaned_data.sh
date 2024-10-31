@@ -5,11 +5,12 @@
 
 # Correct tool citation : Andrews, S. (2010). FastQC: a quality control tool for high throughput sequence data.
 
-# WORKING_DIRECTORY=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/03_cleaned_data/Original_reads_16S
-# OUTPUT=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/04_quality_check/Original_reads_16S
+####################################################################################
+### TufA ###
+####################################################################################
 
-WORKING_DIRECTORY=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/03_cleaned_data/Original_reads_TUFA
-OUTPUT=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/04_quality_check/Original_reads_TUFA
+WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_TUFA
+OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/04_quality_check/Original_reads_TUFA
 
 # Make the directory (mkdir) only if not existe already(-p)
 mkdir -p $OUTPUT
@@ -24,6 +25,7 @@ do
       fastqc $FILE -o $OUTPUT
 done ;
 
+
 conda deactivate fastqc
 conda activate multiqc
 
@@ -31,52 +33,87 @@ conda activate multiqc
 
 multiqc $OUTPUT
 
-## 
-## WORKING_DIRECTORY=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/03_cleaned_data/Original_reads_18S
-## OUTPUT=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/04_quality_check/Original_reads_18S
-## 
-## # Make the directory (mkdir) only if not existe already(-p)
-## mkdir -p $OUTPUT
-## 
-## eval "$(conda shell.bash hook)"
-## conda activate fastqc
-## 
-## cd $WORKING_DIRECTORY
-## 
-## for FILE in $(ls $WORKING_DIRECTORY/*.fastq.gz)
-## do
-##       fastqc $FILE -o $OUTPUT
-## done ;
-## 
-## conda deactivate fastqc
-## conda activate multiqc
-## 
-## # Run multiqc for quality summary
-## 
-## multiqc $OUTPUT
-## 
-## 
-## 
-## WORKING_DIRECTORY=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/03_cleaned_data/Original_reads_ITS
-## OUTPUT=/scratch_vol1/fungi/BioIndic_La_Reunion_Island_Lagoon/04_quality_check/Original_reads_ITS
-## 
-## # Make the directory (mkdir) only if not existe already(-p)
-## mkdir -p $OUTPUT
-## 
-## eval "$(conda shell.bash hook)"
-## conda activate fastqc
-## 
-## cd $WORKING_DIRECTORY
-## 
-## for FILE in $(ls $WORKING_DIRECTORY/*.fastq.gz)
-## do
-##       fastqc $FILE -o $OUTPUT
-## done ;
-## 
-## conda deactivate fastqc
-## conda activate multiqc
-## 
-## # Run multiqc for quality summary
-## 
-## multiqc $OUTPUT
+####################################################################################
+### ITS ###
+####################################################################################
 
+WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_ITS
+OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/04_quality_check/Original_reads_ITS
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p $OUTPUT
+
+eval "$(conda shell.bash hook)"
+conda activate fastqc
+
+cd $WORKING_DIRECTORY
+
+for FILE in $(ls $WORKING_DIRECTORY/*.fastq.gz)
+do
+      fastqc $FILE -o $OUTPUT
+done ;
+
+
+conda deactivate fastqc
+conda activate multiqc
+
+# Run multiqc for quality summary
+
+multiqc $OUTPUT
+
+####################################################################################
+### 18S ###
+####################################################################################
+
+WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_18S
+OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/04_quality_check/Original_reads_18S
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p $OUTPUT
+
+eval "$(conda shell.bash hook)"
+conda activate fastqc
+
+cd $WORKING_DIRECTORY
+
+for FILE in $(ls $WORKING_DIRECTORY/*.fastq.gz)
+do
+      fastqc $FILE -o $OUTPUT
+done ;
+
+
+conda deactivate fastqc
+conda activate multiqc
+
+# Run multiqc for quality summary
+
+multiqc $OUTPUT
+
+
+####################################################################################
+### 16S ###
+####################################################################################
+
+WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_16S
+OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/04_quality_check/Original_reads_16S
+
+# Make the directory (mkdir) only if not existe already(-p)
+mkdir -p $OUTPUT
+
+eval "$(conda shell.bash hook)"
+conda activate fastqc
+
+cd $WORKING_DIRECTORY
+
+for FILE in $(ls $WORKING_DIRECTORY/*.fastq.gz)
+do
+      fastqc $FILE -o $OUTPUT
+done ;
+
+
+conda deactivate fastqc
+conda activate multiqc
+
+# Run multiqc for quality summary
+
+multiqc $OUTPUT
