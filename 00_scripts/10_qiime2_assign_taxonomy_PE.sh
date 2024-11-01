@@ -195,7 +195,7 @@ qiime taxa barplot \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
 
-qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
+# qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
 qiime tools export --input-path taxonomy/RefSeq.qza --output-path export/taxonomy/RefSeq
 qiime tools export --input-path taxonomy/DataSeq.qza --output-path export/taxonomy/DataSeq
 qiime tools export --input-path taxonomy/RefTaxo.qza --output-path export/taxonomy/RefTaxo
@@ -407,7 +407,7 @@ qiime taxa barplot \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
 
-qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
+# qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
 qiime tools export --input-path taxonomy/RefSeq.qza --output-path export/taxonomy/RefSeq
 qiime tools export --input-path taxonomy/DataSeq.qza --output-path export/taxonomy/DataSeq
 qiime tools export --input-path taxonomy/RefTaxo.qza --output-path export/taxonomy/RefTaxo
@@ -573,7 +573,7 @@ qiime taxa barplot \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RarRepSeq.qzv  
 
-qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
+# qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
 qiime tools export --input-path taxonomy/RefSeq.qza --output-path export/taxonomy/RefSeq
 qiime tools export --input-path taxonomy/DataSeq.qza --output-path export/taxonomy/DataSeq
 qiime tools export --input-path taxonomy/RefTaxo.qza --output-path export/taxonomy/RefTaxo
@@ -816,7 +816,7 @@ qiime feature-classifier classify-consensus-vsearch \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization taxonomy/taxa-bar-plots_reads-per-batch_RepSeq_vsearch.qzv 
 
-# qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
+# # qiime tools export --input-path taxonomy/Classifier.qza --output-path export/taxonomy/Classifier
 # qiime tools export --input-path taxonomy/RefSeq.qza --output-path export/taxonomy/RefSeq
 #qiime tools export --input-path taxonomy/DataSeq.qza --output-path export/taxonomy/DataSeq
 #qiime tools export --input-path taxonomy/RefTaxo.qza --output-path export/taxonomy/RefTaxo
