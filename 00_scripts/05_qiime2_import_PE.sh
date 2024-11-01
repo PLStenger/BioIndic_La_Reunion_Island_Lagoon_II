@@ -37,13 +37,13 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT
 
-qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
+# qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
 
-qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
-qiime tools export --input-path core/demux.qza --output-path export/core/demux
+# qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+# qiime tools export --input-path core/demux.qza --output-path export/core/demux
 
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_18S
 OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_18S
@@ -82,13 +82,13 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT
 
-qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
+# qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
 
-qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
-qiime tools export --input-path core/demux.qza --output-path export/core/demux
+# qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+# qiime tools export --input-path core/demux.qza --output-path export/core/demux
 
 
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_ITS
@@ -128,13 +128,13 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT
 
-qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
+# qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
 
-qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
-qiime tools export --input-path core/demux.qza --output-path export/core/demux
+# qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+# qiime tools export --input-path core/demux.qza --output-path export/core/demux
 
 
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/03_cleaned_data/Original_reads_TUFA
@@ -174,10 +174,10 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
 
 cd $OUTPUT
 
-qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
+# qiime demux summarize --i-data core/demux.qza --o-visualization visual/demux.qzv
 
 # for vizualisation :
 # https://view.qiime2.org
 
-qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
-qiime tools export --input-path core/demux.qza --output-path export/core/demux
+# qiime tools export --input-path visual/demux.qzv --output-path export/visual/demux
+# qiime tools export --input-path core/demux.qza --output-path export/core/demux
