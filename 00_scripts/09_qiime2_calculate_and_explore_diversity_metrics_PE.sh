@@ -67,7 +67,7 @@ echo $TMPDIR
    
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
-       --i-table core/ConTable.qza \
+       --i-table core/Table.qza \
        --p-sampling-depth 1000 \
        --m-metadata-file $DATABASE/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
@@ -96,7 +96,7 @@ qiime diversity core-metrics-phylogenetic \
 # Use: qiime feature-table filter-seqs [OPTIONS]
 
 qiime feature-table filter-seqs \
-        --i-data core/ConRepSeq.qza \
+        --i-data core/RepSeq.qza \
         --i-table core/RarTable.qza \
         --o-filtered-data core/RarRepSeq.qza
 
@@ -406,7 +406,7 @@ echo $TMPDIR
 
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
-       --i-table core/ConTable.qza \
+       --i-table core/Table.qza \
        --p-sampling-depth 3678 \
        --m-metadata-file $DATABASE/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
@@ -435,7 +435,7 @@ qiime diversity core-metrics-phylogenetic \
 # Use: qiime feature-table filter-seqs [OPTIONS]
 
 qiime feature-table filter-seqs \
-        --i-data core/ConRepSeq.qza \
+        --i-data core/RepSeq.qza \
         --i-table core/RarTable.qza \
         --o-filtered-data core/RarRepSeq.qza
 
@@ -753,7 +753,7 @@ echo $TMPDIR
 
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
-       --i-table core/ConTable.qza \
+       --i-table core/Table.qza \
        --p-sampling-depth 1855 \
        --m-metadata-file $DATABASE/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
@@ -782,7 +782,7 @@ qiime diversity core-metrics-phylogenetic \
 # Use: qiime feature-table filter-seqs [OPTIONS]
 
 qiime feature-table filter-seqs \
-        --i-data core/ConRepSeq.qza \
+        --i-data core/RepSeq.qza \
         --i-table core/RarTable.qza \
         --o-filtered-data core/RarRepSeq.qza
 
