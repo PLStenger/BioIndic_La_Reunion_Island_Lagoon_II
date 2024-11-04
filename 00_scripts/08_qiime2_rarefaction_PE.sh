@@ -23,11 +23,12 @@ export TMPDIR='/home/fungi'
 echo $TMPDIR
 
 # Note: max-depth should be chosen based on ConTable.qzv (or on /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/export/visual/ConTable/sample-frequency-detail.csv)
+# But here on Table.qzv
 
 qiime diversity alpha-rarefaction \
-  --i-table core/ConTable.qza \
+  --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 1230 \
+  --p-max-depth 25112 \
   --p-min-depth 1 \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -85,11 +86,12 @@ export TMPDIR='/home/fungi'
 echo $TMPDIR
 
 # Note: max-depth should be chosen based on ConTable.qzv (or on /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/export/visual/ConTable/sample-frequency-detail.csv)
+# But here on Table.qzv
 
 qiime diversity alpha-rarefaction \
-  --i-table core/ConTable.qza \
+  --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 13250 \
+  --p-max-depth 33102 \
   --p-min-depth 1 \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -146,11 +148,12 @@ export TMPDIR='/home/fungi'
 echo $TMPDIR
 
 # Note: max-depth should be chosen based on ConTable.qzv (or on /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/export/visual/ConTable/sample-frequency-detail.csv)
+# But here on Table.qzv
 
 qiime diversity alpha-rarefaction \
-  --i-table core/ConTable.qza \
+  --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 18908 \
+  --p-max-depth 16687 \
   --p-min-depth 1 \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
@@ -207,13 +210,14 @@ export TMPDIR='/home/fungi'
 echo $TMPDIR
 
 # Note: max-depth should be chosen based on ConTable.qzv (or on /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/export/visual/ConTable/sample-frequency-detail.csv)
+# But here on Table.qzv
 
 #   --i-table core/ConTable.qza \
 
 qiime diversity alpha-rarefaction \
   --i-table core/Table.qza \
   --i-phylogeny tree/rooted-tree.qza \
-  --p-max-depth 64625 \
+  --p-max-depth 124155 \
   --p-min-depth 1 \
   --m-metadata-file $DATABASE/sample-metadata.tsv \
   --o-visualization visual/alpha-rarefaction.qzv
