@@ -106,8 +106,8 @@ echo $TMPDIR
 # See this thread https://forum.qiime2.org/t/silva-138-classifiers/13131 (found because of this thread : https://forum.qiime2.org/t/silva-138-for-qiime2/12957/4)
 
 #cp $DATABASE/SILVA-138-SSURef-full-length-classifier.qza taxonomy/Classifier.qza
-cp $DATABASE/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
-cp $DATABASE/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
+cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
+cp cp /home/fungi/Mayotte_microorganism_colonisation/98_database_filesc/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
 
 # Script Nolwenn
 #R1_Primers = c("GTGCCAGCMGCCGCGGTAA","GTGYCAGCMGCCGCGGTAA")
@@ -318,8 +318,8 @@ echo $TMPDIR
 # See this thread https://forum.qiime2.org/t/silva-138-classifiers/13131 (found because of this thread : https://forum.qiime2.org/t/silva-138-for-qiime2/12957/4)
 
 #cp $DATABASE/SILVA-138-SSURef-full-length-classifier.qza taxonomy/Classifier.qza
-cp $DATABASE/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
-cp $DATABASE/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
+cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
+cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
 
 # Script Nolwenn
 #R1_Primers = c("GTGCCAGCMGCCGCGGTAA","GTGYCAGCMGCCGCGGTAA")
@@ -482,7 +482,7 @@ echo $TMPDIR
 
 qiime tools import --type 'FeatureData[Taxonomy]' \
   --input-format HeaderlessTSVTaxonomyFormat \
-  --input-path /home/fungi/Pycnandra/98_database_files/ITS/sh_taxonomy_qiime_ver8_dynamic_s_10.05.2021.txt \
+  --input-path /home/fungi/Mayotte_microorganism_colonisation/98_database_files/sh_taxonomy_qiime_ver8_dynamic_s_10.05.2021.txt \
   --output-path taxonomy/RefTaxo.qza
 
 
@@ -493,7 +493,7 @@ qiime tools import --type 'FeatureData[Taxonomy]' \
 # OLD = /home/fungi/Diversity_in_Mare_yam_crop/98_database_files/ITS2/Sequence-UNITE-V7-S-2017.12.01-dynamic.fasta
 
 qiime tools import --type 'FeatureData[Sequence]' \
-  --input-path /home/fungi/Pycnandra/98_database_files/ITS/sh_refs_qiime_ver8_dynamic_s_10.05.2021.fasta \
+  --input-path /home/fungi/Mayotte_microorganism_colonisation/98_database_files/sh_refs_qiime_ver8_dynamic_s_10.05.2021.fasta \
   --output-path taxonomy/DataSeq.qza
 
 # Fungal ITS classifiers trained on the UNITE reference database do NOT benefit
@@ -712,19 +712,19 @@ echo $TMPDIR
 ################################################################################################
 # Ceci fonctionne, mais pour eviter de rereunner, j'enleve ici poru test
 
-#qiime rescript get-ncbi-data \
-#    --p-query '(tufA[ALL] OR TufA[ALL] OR TUFA[ALL] OR tufa[ALL] NOT bacteria[ORGN]))' \
-#    --o-sequences taxonomy/RefTaxo.qza \
-#    --o-taxonomy taxonomy/DataSeq.qza
+qiime rescript get-ncbi-data \
+    --p-query '(tufA[ALL] OR TufA[ALL] OR TUFA[ALL] OR tufa[ALL] NOT bacteria[ORGN]))' \
+    --o-sequences taxonomy/RefTaxo.qza \
+    --o-taxonomy taxonomy/DataSeq.qza
 
 
-#qiime feature-classifier classify-consensus-blast \
-#  --i-query core/RepSeq.qza \
-#  --i-reference-reads taxonomy/RefTaxo.qza \
-#  --i-reference-taxonomy taxonomy/DataSeq.qza \
-#  --p-perc-identity 0.70 \
-#  --o-classification taxonomy/taxonomy_reads-per-batch_RepSeq.qza \
-#  --verbose
+qiime feature-classifier classify-consensus-blast \
+  --i-query core/RepSeq.qza \
+  --i-reference-reads taxonomy/RefTaxo.qza \
+  --i-reference-taxonomy taxonomy/DataSeq.qza \
+  --p-perc-identity 0.70 \
+  --o-classification taxonomy/taxonomy_reads-per-batch_RepSeq.qza \
+  --verbose
 
 qiime feature-classifier classify-consensus-vsearch \
     --i-query core/RepSeq.qza  \
