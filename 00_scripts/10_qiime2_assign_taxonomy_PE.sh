@@ -4,6 +4,10 @@
 ### For 16S
 ###############################################################
 
+echo ###############################################################
+echo 16S
+echo ###############################################################
+
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_16S
 OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_16S/visual
 
@@ -106,8 +110,8 @@ echo $TMPDIR
 # See this thread https://forum.qiime2.org/t/silva-138-classifiers/13131 (found because of this thread : https://forum.qiime2.org/t/silva-138-for-qiime2/12957/4)
 
 #cp $DATABASE/SILVA-138-SSURef-full-length-classifier.qza taxonomy/Classifier.qza
-cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
-cp cp /home/fungi/Mayotte_microorganism_colonisation/98_database_filesc/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
+scp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza  /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_16S/taxonomy/DataSeq.qza
+scp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/Silva-v138-full-length-seq-taxonomy.qza /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_16S/taxonomy/RefTaxo.qza
 
 # Script Nolwenn
 #R1_Primers = c("GTGCCAGCMGCCGCGGTAA","GTGYCAGCMGCCGCGGTAA")
@@ -216,6 +220,10 @@ qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza 
 ### For 18S
 ###############################################################
 
+echo ###############################################################
+echo 18S
+echo ###############################################################
+
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_18S
 OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_18S/visual
 
@@ -234,10 +242,6 @@ TMPDIR=/home
 # Aim: Import data to create a new QIIME 2 Artifact
 # https://gitlab.com/IAC_SolVeg/CNRT_BIOINDIC/-/blob/master/snk/12_qiime2_taxonomy
 
-
-###############################################################
-### For Bacteria
-###############################################################
 
 cd $WORKING_DIRECTORY
 
@@ -318,8 +322,8 @@ echo $TMPDIR
 # See this thread https://forum.qiime2.org/t/silva-138-classifiers/13131 (found because of this thread : https://forum.qiime2.org/t/silva-138-for-qiime2/12957/4)
 
 #cp $DATABASE/SILVA-138-SSURef-full-length-classifier.qza taxonomy/Classifier.qza
-cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
-cp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
+scp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/SILVA-138-SSURef-Full-Seqs.qza  /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_18S/taxonomy/DataSeq.qza
+scp /home/fungi/Mayotte_microorganism_colonisation/98_database_files/Silva-v138-full-length-seq-taxonomy.qza /home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_18S/taxonomy/RefTaxo.qza
 
 # Script Nolwenn
 #R1_Primers = c("GTGCCAGCMGCCGCGGTAA","GTGYCAGCMGCCGCGGTAA")
@@ -428,6 +432,10 @@ qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza 
 ###############################################################
 ### For ITS
 ###############################################################
+
+echo ###############################################################
+echo ITS
+echo ###############################################################
 
 
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_ITS
@@ -596,6 +604,10 @@ qiime tools export --input-path taxonomy/taxonomy_reads-per-batch_RarRepSeq.qza 
 ### For TUFA
 ###############################################################
 
+echo ###############################################################
+echo TUFA
+echo ###############################################################
+
 
 WORKING_DIRECTORY=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_TUFA
 OUTPUT=/home/fungi/BioIndic_La_Reunion_Island_Lagoon_II/05_QIIME2/Original_reads_TUFA/visual
@@ -710,7 +722,6 @@ echo $TMPDIR
 # https://forum.qiime2.org/t/building-a-coi-database-from-ncbi-references/16500
 
 ################################################################################################
-# Ceci fonctionne, mais pour eviter de rereunner, j'enleve ici poru test
 
 qiime rescript get-ncbi-data \
     --p-query '(tufA[ALL] OR TufA[ALL] OR TUFA[ALL] OR tufa[ALL] NOT bacteria[ORGN]))' \
