@@ -727,9 +727,7 @@ qiime rescript get-ncbi-data \
     --p-query '(tufA[ALL] OR TufA[ALL] OR TUFA[ALL] OR tufa[ALL] NOT bacteria[ORGN]))' \
     --o-sequences taxonomy/RefTaxo.qza \
     --o-taxonomy taxonomy/DataSeq.qza \
-    --p-n-jobs 1 \
-    --p-query-size 1000 \
-    --p-entrez-delay 3
+    --p-n-jobs 5
 
 qiime feature-classifier classify-consensus-blast \
   --i-query core/RepSeq.qza \
