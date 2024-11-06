@@ -726,7 +726,8 @@ echo $TMPDIR
 qiime rescript get-ncbi-data \
     --p-query '(tufA[ALL] OR TufA[ALL] OR TUFA[ALL] OR tufa[ALL] NOT bacteria[ORGN]))' \
     --o-sequences taxonomy/RefTaxo.qza \
-    --o-taxonomy taxonomy/DataSeq.qza
+    --o-taxonomy taxonomy/DataSeq.qza \
+    --p-n-jobs 1
 
 
 qiime feature-classifier classify-consensus-blast \
